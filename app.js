@@ -28,16 +28,8 @@ function cameraStart() {
 cameraFlip.onclick = function () {
   if (constraints.video.facingMode === "environment") {
     constraints.video.facingMode = "user"
-    $('#camera--flip', '#camera--sensor', '#camera--output').css({
-      transform: 'scaleX(-1)',
-      filter: 'FlipH'
-    });
   } else {
     constraints.video.facingMode = "environment"
-    $('#camera--flip', '#camera--sensor', '#camera--output').css({
-      transform: 'none',
-      filter: 'none'
-    });
   }
   cameraStart()
 }
