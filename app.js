@@ -29,7 +29,7 @@ cameraFlip.onclick = function () {
   if (constraints.video.facingMode === "environment") {
     constraints.video.facingMode = "user"
     $('#camera--flip').css({
-      'background-color': 'green'
+      'background-color': 'blue'
     });
   } else {
     constraints.video.facingMode = "environment"
