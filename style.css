@@ -25,8 +25,13 @@ html, body{
     text-align: center;
     box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2);
     position: fixed;
-    bottom: 30px;
     left: calc(50% - 100px);
+}
+#camera--trigger{
+  bottom: 30px;
+}
+#camera--flip{
+  top:30px;
 }
 .taken{
     height: 100px!important;
