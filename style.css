@@ -12,7 +12,7 @@ html, body{
 }
 #camera--view, #camera--sensor, #camera--output{
     transform: scaleX(-1);
-
+    filter: FlipH;
 }
 #camera--trigger, #camera--flip{
     width: 200px;
@@ -25,13 +25,22 @@ html, body{
     text-align: center;
     box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2);
     position: fixed;
+    bottom: 30px;
     left: calc(50% - 100px);
 }
-#camera--trigger{
-  bottom: 30px;
-}
 #camera--flip{
-  top:30px;
+  width: 200px;
+  background-color: black;
+  color: white;
+  font-size: 16px;
+  border-radius: 30px;
+  border: none;
+  padding: 15px 20px;
+  text-align: center;
+  box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2);
+  position: fixed;
+  top: 30px;
+  left: calc(50% - 100px);
 }
 .taken{
     height: 100px!important;
