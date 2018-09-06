@@ -28,8 +28,7 @@ cameraFlip.onclick = function(){
   }else{
     constraints.video.facingMode = "environment"
   }
-  window.addEventListener("unload", cameraStart, false);
-  window.addEventListener("load", cameraStart, false);
+  cameraStart()
 }
 // Take a picture when cameraTrigger is tapped
 cameraTrigger.onclick = function() {
