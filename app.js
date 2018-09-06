@@ -21,11 +21,14 @@ function cameraStart() {
     });
 }
 cameraFlip.onclick = function(){
+  console.log(constraints.video.facingMode)
+  console.log(constraints.video.facingMode === "environment")
   if(constraints.video.facingMode === "environment"){
     constraints.video.facingMode = "user"
   }else{
     constraints.video.facingMode = "environment"
   }
+  window.addEventListener("load", cameraStart, false);
 }
 // Take a picture when cameraTrigger is tapped
 cameraTrigger.onclick = function() {
