@@ -4,7 +4,8 @@ var constraints = { video: { facingMode: "environment" }, audio: false };
 const cameraView = document.querySelector("#camera--view"),
     cameraOutput = document.querySelector("#camera--output"),
     cameraSensor = document.querySelector("#camera--sensor"),
-    cameraTrigger = document.querySelector("#camera--trigger")
+    cameraTrigger = document.querySelector("#camera--trigger"),
+    cameraFlip = document.querySelector("#camera--flip")
 
   navigator.mediaDevices.getUserMedia = navigator.mediaDevices.getUserMedia || navigator.mediaDevices.webkitGetUserMedia || navigator.mediaDevices.mozGetUserMedia  || navigator.mediaDevices.oGetUserMedia || navigator.mediaDevices.msGetUserMedia
 // Access the device camera and stream to cameraView
@@ -18,6 +19,13 @@ function cameraStart() {
     .catch(function(error) {
         console.error("Oops. Something is broken.", error);
     });
+}
+cameraFlip.onclick = function(){
+  if(constraints.video.facingMode === "environment"){
+    constraints.video.facingMode = "user"
+  }else{
+    constraints.video.facingMode = "environment"
+  }
 }
 // Take a picture when cameraTrigger is tapped
 cameraTrigger.onclick = function() {
