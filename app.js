@@ -21,8 +21,6 @@ function cameraStart() {
     });
 }
 cameraFlip.onclick = function(){
-  console.log(constraints.video.facingMode)
-  console.log(constraints.video.facingMode === "environment")
   if(constraints.video.facingMode === "environment"){
     constraints.video.facingMode = "user"
   }else{
